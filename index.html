@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>💖 Maxsus Taklif</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="assets/music.mp3">
+</audio>
+
+<div class="background"></div>
+
+<div class="card">
+
+<h1>🌸 Salom</h1>
+
+<p id="question">
+Men bilan uchrashuvga chiqasanmi? 💖
+</p>
+
+<div class="buttons">
+
+<button
+class="yes"
+onclick="accept()">
+Ha ❤️
+</button>
+
+<button
+class="no"
+id="noBtn">
+Yana o‘ylab ko‘raman 😄
+</button>
+
+</div>
+
+<div
+id="meetingBox"
+style="display:none;">
+
+<h2>
+📅 Uchrashuv
+</h2>
+
+<p>
+📍 Joy: Magic City
+</p>
+
+<select id="meetingDay">
+
+<option value="">
+Kun tanlang
+</option>
+
+<option>Dushanba</option>
+<option>Seshanba</option>
+<option>Chorshanba</option>
+<option>Payshanba</option>
+<option>Juma</option>
+<option>Shanba</option>
+<option>Yakshanba</option>
+
+</select>
+
+<input
+type="time"
+id="meetingTime">
+
+<button
+class="confirm"
+onclick="confirmMeeting()">
+
+Tasdiqlash 💖
+
+</button>
+
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
