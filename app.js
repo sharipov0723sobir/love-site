@@ -1,20 +1,17 @@
-const music =
-document.getElementById(
-"music"
-);
+const music = document.getElementById("music");
 
 document.body.addEventListener(
 "click",
-()=>{
+function(){
 
-music
-.play()
-.catch(()=>{});
+if(music){
+
+music.play().catch(()=>{});
+
+}
 
 },
-{
-once:true
-}
+{once:true}
 );
 
 /* yurak */
@@ -22,10 +19,7 @@ once:true
 function createHeart(){
 
 const h=
-document
-.createElement(
-"div"
-);
+document.createElement("div");
 
 h.className=
 "heart";
@@ -47,19 +41,15 @@ Math.random()*30
 h.style.animationDuration=
 (
 4+
-Math.random()*4
+Math.random()*3
 )
 +"s";
 
-document.body.appendChild(
-h
-);
+document.body.appendChild(h);
 
 setTimeout(
 ()=>{
-
 h.remove();
-
 },
 7000
 );
@@ -68,7 +58,7 @@ h.remove();
 
 setInterval(
 createHeart,
-350
+500
 );
 
 /* HA */
@@ -88,7 +78,7 @@ document
 "question"
 )
 .innerHTML=
-"💖 Zo‘r! Endi vaqtni tanlaymiz";
+"💖 Zo‘r! Uchrashuv vaqtini tanlang";
 
 document
 .getElementById(
@@ -98,71 +88,54 @@ document
 .display=
 "block";
 
-for(
-let i=0;
-i<30;
-i++
-){
-
-setTimeout(
-createHeart,
-i*120
-);
-
 }
 
-}
-
-/* YO‘Q */
+/* YOQ */
 
 const noBtn=
-document
-.getElementById(
+document.getElementById(
 "noBtn"
 );
 
-noBtn
-.addEventListener(
-"mouseenter",
+if(noBtn){
+
+noBtn.addEventListener(
+"mouseover",
+
 ()=>{
 
-const x=
+let x=
 Math.random()
 *
 (
-window
-.innerWidth
+window.innerWidth
 -
-150
+220
 );
 
-const y=
+let y=
 Math.random()
 *
 (
-window
-.innerHeight
+window.innerHeight
 -
-80
+120
 );
 
-noBtn
-.style
-.position=
+noBtn.style.position=
 "fixed";
 
-noBtn
-.style
-.left=
+noBtn.style.left=
 x+"px";
 
-noBtn
-.style
-.top=
+noBtn.style.top=
 y+"px";
 
 }
+
 );
+
+}
 
 /* TASDIQLASH */
 
@@ -204,21 +177,16 @@ document
 
 `
 💖 Kelishdik!<br>
-${day}<br>
+📅 ${day}<br>
 ⏰ ${time}
 `;
 
-for(
-let i=0;
-i<40;
-i++
-){
-
-setTimeout(
-createHeart,
-i*70
-);
-
-}
+document
+.getElementById(
+"meetingBox"
+)
+.style
+.display=
+"none";
 
 }
